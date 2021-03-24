@@ -5,6 +5,17 @@ import java.util.List;
 public class OddNumbers {
 
     public static Integer sum(List<Integer> numbers) {
-        return null;
+            return numbers.stream()
+                    .mapToInt(Integer::intValue)
+                    .filter(n -> (n % 2 != 0))
+                    .sum();
+        }
     }
-}
+
+
+
+
+
+
+
+
